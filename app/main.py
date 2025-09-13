@@ -29,7 +29,8 @@ app.include_router(vote.router)
 
 @app.get('/')
 def root():
-    return {'message':"Hello Divyang FastAPI1"}
+    return {'message':"Hello Divyang FastAPI1 Digital Ocean deployed droplet is made and domain name taken from hostinger and hosted on digital ocean"}
+
  
 
 # it is refer as schema it is called pydantic model and another Post inside model file Post  it is called sqlAlchemy model for table in DB 

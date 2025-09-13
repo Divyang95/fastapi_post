@@ -1,0 +1,15 @@
+[Unit]
+Description=gunicorn instance to server api 
+After=network.target 
+
+[Service]
+User=divyang-fastapiyt
+Group=divyang-fastapiyt 
+WorkingDirectory=/home/divyang-fastapiyt/app/src
+Environment="PATH=/home/divyang-fastapiyt/app/venv/bin"
+EnvironmentFile=/home/divyang-fastapiyt/.env 
+ExecStart=/home/divyang-fastapiyt/app/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+[Install]
+WantedBy=multi-user.target 
+
